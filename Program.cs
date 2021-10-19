@@ -42,8 +42,7 @@ namespace OOP_Lab4
             items.Remove(item);
         }
         private T[] arr = new T[100];
-
-       
+        //jdfhdj
         public T  this[int i]// индексатор
         {
             get { return arr[i]; }
