@@ -20,7 +20,7 @@ namespace OOP_Lab4
 
     public class Set<T>// множество Set
     {
-        private static List<T> items = new List<T>();
+        public List<T> items = new List<T>();
         public int Count => items.Count;// счётчик
         public Set(T item)//конструктор
         {
@@ -49,11 +49,11 @@ namespace OOP_Lab4
             set { arr[i] = value; }
         }
         //перегрузка операций
-        
 
-        public static bool operator < (Set<T> item1, T item2)
+
+        public static bool operator <(Set<T> item1, T item2)
         {
-            if (items.Contains(item2))
+            if (item1.items.Contains(item2))
             {
                 return true;
             }
@@ -67,7 +67,7 @@ namespace OOP_Lab4
         {
             throw new NotImplementedException();
         }
-        /*public static bool operator >(Set<T> set1, Set<T> set2)
+        public static bool operator >(Set<T> set1, Set<T> set2)
         {
             // Проверяем входные данные на пустоту.
             if (set1 == null)
@@ -79,7 +79,6 @@ namespace OOP_Lab4
             {
                 throw new ArgumentNullException(nameof(set2));
             }
-
             // Перебираем элементы первого множества.
             // Если все элементы первого множества содержатся во втором,
             // то это подмножество. Возвращаем истину, иначе ложь.
@@ -90,6 +89,6 @@ namespace OOP_Lab4
         public static bool operator <(Set<T> set1, Set<T> set2)
         {
             throw new NotImplementedException();
-        }*/
+        }
     }
 }
